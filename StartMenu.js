@@ -9,8 +9,9 @@ Sandbox.StartMenu.prototype = {
 		startBG = this.add.image(0, 0, 'titlescreen');
 		startBG.inputEnabled = true;
 		startBG.events.onInputDown.addOnce(this.startGame, this);
-		startPrompt = this.add.bitmapText(this.world.centerX-155, this.world.centerY+180, 'eightbitwonder', 'Touch to Start!', 24);
-		
+		//startPrompt = this.add.bitmapText(this.world.centerX-155, this.world.centerY+180, 'eightbitwonder', 'Touch to Start!', 24);
+        var style = { font: "50px Arial", fill: "#000066", align: "center" };
+        startPrompt = this.add.text(this.world.centerX-155, this.world.centerY+180, "Touch to Start!", style);    
     	//this.state.start('Game');
 	},
 
