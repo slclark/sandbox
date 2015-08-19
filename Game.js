@@ -49,23 +49,37 @@ Sandbox.Game.prototype = {
 		
 		// Draw a line
 		var sampleLine = this.add.graphics(600, 300);
-		sampleLine.lineStyle(3, '#333399', 1);
+        //  - need to use hex value - not HTML hex
+		sampleLine.lineStyle(3, 0x333399, 1);
 		sampleLine.moveTo(0, 0);
 		sampleLine.lineTo(290, 10);
 		
 		// Draw a circle
 		var sampleCircle = this.add.graphics(600,320);
-		// Trying to make it blue, but the fill seems to be black by default
-		sampleCircle.beginFill('#333399', 0.5);
+		// Trying to make it blue, but the fill seems to be black by default - need to use hex value - not HTML hex
+		sampleCircle.beginFill(0x333399, 0.5);
 		sampleCircle.drawCircle(20, 20, 20);
 		sampleCircle.endFill();
 		
 		// Drawing an arc (part of a circle)
 		var sampleArc = this.add.graphics(500, 400);
-		// Not sure what method to use to make the Arc colored
-		sampleArc.beginFill('#333399', 0.7);
-		//sampleArc.arc(0, 0, 30, 0, 1); // This arc method seems to crash this script
+		// Not sure what method to use to make the Arc colored - need to use hex value - not HTML hex
+		sampleArc.beginFill(0x333399, 0.7);
+		sampleArc.arc(0, 0, 30, 0, 1); // This arc method seems to crash this script
 		sampleArc.endFill();
+        
+        
+        // sharonArc example
+        var sharonArc = this.add.graphics(this.world.centerX, this.world.centerY);
+        //  Our first arc will be a line only
+        sharonArc.lineStyle(8, 0xffd900);
+        sharonArc.arc(0, 0, 135, 0, 1.5707963267948966, false);
+        //  This will reset the lineStyle
+        sharonArc.lineStyle(0);
+        //  And this draws a filled arc
+        sharonArc.beginFill(0xFF3300);
+        sharonArc.arc(-100, -100, 135, this.math.degToRad(0), this.math.degToRad(90));
+        sharonArc.endFill();
 	},
 	
 	init: function() {
