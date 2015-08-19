@@ -34,7 +34,7 @@ Sandbox.Preloader.prototype = {
 		this.titleText = this.add.image(this.world.centerX, this.world.centerY-100, 'titleimage');
 		this.titleText.anchor.setTo(0.5, 0.5);
 		this.load.image('titlescreen', 'assets/images/TitleBG.png');
-		this.load.bitmapFont('eightbitwonder', 'assets/fonts/eightbitwonder.png', 'assets/fonts/eightbitwonder.fnt');
+		this.load.bitmapFont('desyrel', 'assets/fonts/desyrel.png', 'assets/fonts/desyrel.xml');
 		this.load.image('game_bg', 'assets/images/game_bg_900x500.png');
 		this.load.image('phaser_logo', 'assets/images/phaser_logo.png');
 		this.load.image('sample_sprite', 'assets/images/sample_sprite_128x128.png');
